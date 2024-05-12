@@ -1,7 +1,17 @@
-or char in name:
+def display_name(name):
+  print("Hello, " + name)
+  
+def count_vowels(name):
+  vowels = "aeiouAEIOU"
+  count = 0
+  for char in name:
     if char in vowels:
       count += 1
-      print(count)
+      print (count)
+
+def display_charsleft(name, n):
+  charsleft = name[::n]
+  return charsleft
 
 def reverse_name(name):
   reverse = name[::-1]
@@ -12,6 +22,6 @@ def main(name, n):
   display_charsleft(name, n)
   count_vowels(name)
   reverse_name(name)
-  
-  
+
+
 main(input('what is your name? '),int(input('how many characters from the left')))
